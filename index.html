@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Connections</title>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Amiri&display=swap" rel="stylesheet">
+		<link href="assets/css/reset.css" rel="stylesheet">
+		<link rel="preconnect" href="https://portifolio-g4.firebaseio.com/">
+		<link href="assets/css/style.css" rel="stylesheet">
+		<meta name='viewport' content="width=device-width,initial-scale=1">
+		<script src="assets/js/codes.js"></script>
+  		<script src="assets/js/index.js"></script>
+  
+
+		<meta charset="utf-8">
+	</head>
+
+	
+	<body class="parent">
+		<div class="preloader">
+        <div class="inner">
+           <!-- HTML DA ANIMAÇÃO MUITO LOUCA DO SEU PRELOADER! -->
+           <div class="bolas">
+              <div></div>
+              <div></div>
+              <div></div>                    
+           </div>
+        </div>
+    	</div>
+
+		<header class="header">
+			<div class="header_left">
+				<a href="index.html"><img class="logo" src="assets/img/logo.png" alt="logo"></a>
+				<h1 class="busca">Buscar</h1>
+			</div>
+			
+			<div class="header_right">
+				<h1 class="entrar">Entrar</h1>
+				<h1 class="cadastrar">Cadastrar</h1>
+			</div>
+			
+		</header>
+		<main class="body">
+
+			<section>
+				<div class="body_left">
+					<img class="foto_perfil" src="assets/img/perfil.png" alt="Foto de perfil">
+
+					<h2 class="info_title">Informações de Contato</h2>
+					<ul>
+						<li class="info"><a href="">email@email.com</a></li>
+						<li class="info"><a href="">linkedin.com/alberto</a></li>
+						<li class="info"><a href="">(11)99999-9999</a></li>
+						<li class="info"><a href="">instagram.com/alberto</a></li>
+						<li class="info"><a href="">facebook.com/alberto</a></li>
+						<li class="info"><a href="">github.com/alberto</a></li>
+
+					</ul>
+				</div>
+			</section>
+
+			<section>
+				<div class="body_center">
+					<h2 class="autor">Alberto B.</h2>
+
+					<h2 class="ocupation">Engenheiro</h2>
+
+					<h2 class="bio_title">Biografia</h2>
+
+					<p class="bio">
+						Nasci em um Brasil completamente diferente de hoje. Bondes passando, crianças brincando de pipa e bolinha de gude. Tecnologia era algo distante da realidade brasileira, que ainda se agarrava a uma indústria sucateada e ao coronelismo.  Dessa maneira, me destaco, não só pela idade avançada, mas pelos sólidos conhecimentos em programação, matemática e empreendedorismo aqui apresentados. Decidi cursar engenharia de computação quando assoprei as velinhas do meu 78º aniversário. Nunca é tarde para entrar na faculdade e estudar. Nunca é tarde para me contratar. Prazer, meu nome é Alberto de Sá Fagundes e esse é meu portfólio.
+					</p>
+				</div>
+			</section>
+			
+			<section>
+				<div id="content" class="body_right"> 
+					<h2 class="categoria_title">Áreas & Projetos</h2>
+					<nav>
+						<ul>
+							<div  class="categoria">
+								<ul>
+									{{#each portifolio}}
+									<li class="cat_index"><a href="categoria.html?key={{@key}}">{{this.categoria}}</a></li>
+									{{/each}}
+								</ul>
+							</div>
+						</ul>
+					</nav>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>
